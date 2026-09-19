@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>הגדרות: התאמת לבוש לפודקאסט</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="options">
+  <h1>הגדרות התוסף</h1>
+
+  <section>
+    <label class="field">
+      <span>כתובת הפלטפורמה (API)</span>
+      <input type="url" id="apiBase" dir="ltr" placeholder="https://app.your-domain.com">
+    </label>
+    <p class="muted">
+      התוסף פונה לכתובת <code dir="ltr">&lt;כתובת&gt;/api/episodes/by-youtube/&lt;מזהה סרטון&gt;</code>
+      כדי לבדוק אם סרטון הוא פרק של הפודקאסט. השאירו ריק כדי לעבוד במצב דמו.
+    </p>
+    <div class="row">
+      <button type="button" id="save" class="primary">שמירה</button>
+      <button type="button" id="test">בדיקת חיבור</button>
+      <span id="status" class="muted"></span>
+    </div>
+  </section>
+
+  <section>
+    <label class="field">
+      <span>סגנון הצפייה שלי</span>
+      <select id="preferredStyle">
+        <option value="">לשאול בכל פעם</option>
+      </select>
+    </label>
+    <label class="check">
+      <input type="checkbox" id="autoRedirect">
+      <span>לעבור אוטומטית לגרסה המותאמת כשהיא קיימת (לא פעיל במצב דמו)</span>
+    </label>
+  </section>
+
+  <script src="common.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

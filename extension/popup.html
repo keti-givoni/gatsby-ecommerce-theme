@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>התאמת לבוש לפודקאסט</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="popup">
+  <h1>התאמת לבוש לפודקאסט</h1>
+
+  <section id="episode" hidden>
+    <div class="label">הפרק הנוכחי</div>
+    <div id="episodeTitle" class="value"></div>
+    <div id="versions" class="chips"></div>
+    <div id="demoNote" class="note" hidden>מצב דמו: לא הוגדרה כתובת פלטפורמה, הקישורים הם דוגמה בלבד.</div>
+  </section>
+
+  <section id="noEpisode" hidden>
+    <div class="muted" id="noEpisodeText">הדף הפתוח אינו פרק של הפודקאסט.</div>
+  </section>
+
+  <section>
+    <label class="field">
+      <span>סגנון הצפייה שלי</span>
+      <select id="preferredStyle">
+        <option value="">לשאול בכל פעם</option>
+      </select>
+    </label>
+    <label class="check">
+      <input type="checkbox" id="autoRedirect">
+      <span>לעבור אוטומטית לגרסה המותאמת כשהיא קיימת</span>
+    </label>
+  </section>
+
+  <footer>
+    <a href="#" id="openOptions">הגדרות מתקדמות</a>
+    <span id="status" class="muted"></span>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
